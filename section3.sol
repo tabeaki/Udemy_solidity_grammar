@@ -1,11 +1,10 @@
-// ⇨if ~ else文使い方
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.1;
-contract section3_contrract {
+contract section3_contract {
     bool a = true;
     bool b = false;
 
-    // ⇨if 文使い方
+    // ⇨ifを使って条件分岐できるようになろう！
     function ifInspection() public view returns (uint) {
 
         if (!a) {
@@ -14,7 +13,7 @@ contract section3_contrract {
         return 2;
     }
 
-    // ⇨else if文使い方
+    // ⇨else ifを使って複雑な条件分岐をできる様にしよう！
     function elseIfInspection() public view returns (uint) {
 
         if (!a) {
@@ -25,7 +24,7 @@ contract section3_contrract {
         return 3;
     }
 
-    // ⇨if ~ else文使い方
+    // ⇨if ~ elseを使って複雑な条件分岐をできる様にしよう！
     function ifElseInspection() public view returns (uint) {
 
         if (!a) {
@@ -37,7 +36,7 @@ contract section3_contrract {
         }
     }
 
-    // ⇨while文使い方ループについて学ぼう①
+    // ⇨while文を使用してループできる様になろう
     function whileInspection() public pure returns (uint) {
         uint loopCount = 1;  
         while(loopCount < 5) {
@@ -45,13 +44,13 @@ contract section3_contrract {
         }
         return loopCount;
     }
-    // ⇨while のbreak continueの使い方
+    // ⇨while のbreak continueを使ってループを制御しよう！
     function whileBreakInspection() public pure returns (uint) {
         uint loopCount = 1;  
         while(loopCount < 5) {
-            if(loopCount == 2){
-                continue;
-            }
+            // if(loopCount == 2){
+            //     continue;
+            // } //無限ループになる為失敗します。
             
             if(loopCount == 4){
                 break;
@@ -61,19 +60,19 @@ contract section3_contrract {
         return loopCount;
     }
 
-    // ⇨for文使い方ループについて学ぼう②
+    // ⇨for文使い方ループについて学ぼう
     function forInspection() public pure returns (uint) {  
         uint loopCount;
-        for(loopCount = 1; loopCount < 5; ++loopCount) {
-            ++loopCount;
+        for(loopCount = 1; loopCount < 5; loopCount++) {
+            
         }
         return loopCount;
     }
 
-    // ⇨for のbreak continueの使い方
+    // ⇨for のbreak continueでループを制御しよう！
     function forContinueInspection() public pure returns (uint) {  
         uint loopCount;
-        for(loopCount = 1; loopCount < 5; ++loopCount) {
+        for(loopCount = 1; loopCount < 5; loopCount++) {
             if(loopCount == 2){
                 continue;
             }
